@@ -129,10 +129,12 @@ class LazySusan(object):
     @no_arg_command
     def cmd_about(self, data):
         """Display information about this bot."""
-        reply = ('I am powered by LazySusan version {0}. '
-                 'https://github.com/bboe/LazySusan'.format(__version__))
-        reply2 = ('If you have questions/requests, you can visit ##TTT on IRC.Freenode.net -- http://webchat.freenode.net/?randomnick=1&channels=##ttt&uio=d4')
-        self.reply(reply, reply2, data)
+        reply = ('''I am powered by LazySusan version {0}. '
+                 'https://github.com/bboe/LazySusan'.format(__version__)
+                 'Questions/Comments can be directed to ##TTT on IRC.Freenode.net
+                 http://webchat.freenode.net/?randomnick=1&channels=##ttt&uio=d4'''
+                 )
+        self.reply(reply, data)
 
     @no_arg_command
     def cmd_commands(self, data):
