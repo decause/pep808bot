@@ -129,6 +129,7 @@ class Playlist(CommandPlugin):
         if self.bot.api.roomId:
             self.bot.api.roomInfo(self.room_init)
 
+    @admin_or_moderator_required
     @no_arg_command
     def add(self, data):
         """Request that the bot add the current song to her playlist."""
