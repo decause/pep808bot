@@ -8,7 +8,7 @@ class Echo(CommandPlugin):
     COMMANDS = {'/echo': 'echo'}
 
     def echo(self, message, data):
-        """Repeat everything everything after /echo."""
+        """Repeat everything after /echo."""
         self.bot.reply(message, data)
 
 
@@ -17,6 +17,7 @@ class Shout(CommandPlugin):
 
     @admin_or_moderator_required
     def shout(self, message, data):
+        """Repeat everything after /shout, to the whole room"""
         self.bot.api.speak(message)
 
 
@@ -24,6 +25,7 @@ class Twerk(CommandPlugin):
     COMMANDS = {'/twerk': 'twerk'}
 
     def twerk(self, message, data):
+        """Bot upvotes current track, lets you know it's hot"""
         message = 'Shakin\' dat ass!'
         self.bot.reply(message, data)
         self.bot.api.bop()
@@ -33,6 +35,8 @@ class Roll(CommandPlugin):
     COMMANDS = {'/roll': 'roll'}
 
     def roll(self, message, data):
+        """Returns a random number between 1-10. Used for deciding who leaves
+        the decks"""
         message = random.randint(1, 10)
         self.bot.reply(message, data)
 
