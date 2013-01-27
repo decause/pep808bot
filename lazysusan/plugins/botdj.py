@@ -137,9 +137,9 @@ class Playlist(CommandPlugin):
             self.bot.reply('There is no song playing.', data)
             return
         if self.bot.api.currentSongId in self.playlist:
-            self.bot.reply('We already have that song.', data)
+            self.bot.reply('Cannot add, already in list.', data)
         else:
-            self.bot.reply('Cool tunes, daddio.', data)
+            self.bot.reply('Track added.', data)
             self.bot.api.playlistAdd(self.bot.api.currentSongId,
                                      len(self.playlist))
             self.playlist.add(self.bot.api.currentSongId)

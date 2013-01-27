@@ -1,4 +1,5 @@
 from lazysusan.plugins import CommandPlugin
+#from lazysusan.helpers import admin_or_moderator_required
 
 
 class Echo(CommandPlugin):
