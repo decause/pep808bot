@@ -14,7 +14,7 @@ class Twerk(CommandPlugin):
     COMMANDS = {'twerk': 'twerk'}
 
     def twerk(self, message, data):
-        message = 'twerk++'
+        message = 'Shakin\' dat ass!'
         self.bot.reply(message, data)
         self.bot.api.bop()
 
