@@ -131,7 +131,8 @@ class LazySusan(object):
         """Display information about this bot."""
         reply = ('I am powered by LazySusan version {0}. '
                  'https://github.com/bboe/LazySusan'.format(__version__))
-        self.reply(reply, data)
+        reply2 = ('If you have questions/requests, you can visit ##TTT on IRC.Freenode.net -- http://webchat.freenode.net/?randomnick=1&channels=##ttt&uio=d4')
+        self.reply(reply, reply2, data)
 
     @no_arg_command
     def cmd_commands(self, data):
