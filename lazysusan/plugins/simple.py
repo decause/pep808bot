@@ -1,5 +1,7 @@
+import random
+
 from lazysusan.plugins import CommandPlugin
-#from lazysusan.helpers import admin_or_moderator_required
+from lazysusan.helpers import admin_or_moderator_required
 
 
 class Echo(CommandPlugin):
@@ -10,13 +12,30 @@ class Echo(CommandPlugin):
         self.bot.reply(message, data)
 
 
+class Shout(CommandPlugin):
+    COMMANDS = {'/shout': 'shout'}
+
+    @admin_or_moderator_required
+    def shout(self, message, data):
+        self.bot.api.speak(message)
+
+
 class Twerk(CommandPlugin):
-    COMMANDS = {'twerk': 'twerk'}
+    COMMANDS = {'/twerk': 'twerk'}
 
     def twerk(self, message, data):
         message = 'Shakin\' dat ass!'
         self.bot.reply(message, data)
         self.bot.api.bop()
+
+
+class Roll(CommandPlugin):
+    COMMANDS = {'/roll': 'roll'}
+
+    def roll(self, message, data):
+        message = random.randint(1, 10)
+        self.bot.reply(message, data)
+
 
 
 #class Holler(CommandPlugin):
