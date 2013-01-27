@@ -7,3 +7,8 @@
     (http://turntable.fm/the_trap_train_ttt), which is some wild shit if you
     have not had a listen. The chrome plugin will give you the hash of whatever
     room you are in, and then you just add that to the .ini
+
+ 4. Once everything is settled, you can run the bot by:
+    $ lazysusan -p lazysusan/plugins
+
+ 5. Have fun!
