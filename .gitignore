@@ -3,6 +3,7 @@
 *.pyc
 .coverage
 *.egg-info/
+*.swp
 _build/
 build/
 dist/
