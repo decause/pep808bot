@@ -10,11 +10,11 @@ class Echo(CommandPlugin):
         self.bot.reply(message, data)
 
 
-class Bonus(CommandPlugin):
-    COMMANDS = {'/bonus': 'bonus'}
+class Twerk(CommandPlugin):
+    COMMANDS = {'twerk': 'twerk'}
 
-    def bonus(self, message, data):
-        message = '+1'
+    def twerk(self, message, data):
+        message = 'twerk++'
         self.bot.reply(message, data)
         self.bot.api.bop()
 
