@@ -26,7 +26,7 @@ class Twerk(CommandPlugin):
 
     def twerk(self, message, data):
         """Bot upvotes current track, lets you know it's hot"""
-        message = 'Shakin\' dat ass!'
+        message = 'Twerkin'
         self.bot.reply(message, data)
         self.bot.api.bop()
 
