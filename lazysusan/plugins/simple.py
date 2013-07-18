@@ -26,7 +26,7 @@ class Twerk(CommandPlugin):
 
     def twerk(self, message, data):
         """Bot upvotes current track, lets you know it's hot"""
-        message = 'Twerkin'
+        message = 'Twerkin\''
         self.bot.reply(message, data)
         self.bot.api.bop()
 
@@ -39,21 +39,3 @@ class Roll(CommandPlugin):
         the decks"""
         message = random.randint(1, 10)
         self.bot.reply(message, data)
-
-
-
-#class Holler(CommandPlugin):
-#    COMMANDS = {'/holler': 'holler'}
-#
-#    def holler(self, message, data):
-#        userID = self.bot.getUserID()
-#        message = 'Sgood' + '%s' % userID.name
-#        self.bot.reply(message, data)
-
-#class Boot(CommandPlugin):
-#    COMMANDS = {'/boot': 'boot'}
-#
-#    @admin_or_moderator_required
-#    def boot(self, message, data):
-#        userID = self.bot.getUserID()
-#        self.bot.api.boot(UserID)
